@@ -4,8 +4,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-.box{
-    width: 20%;
+.box {
+  width: 270px;
+  /* height: 350px; */
 }
 
 body {
@@ -13,11 +14,9 @@ body {
   background-color: #ffffff;
 }
 
-
 .row {
   width: 50%;
 }
-
 
 .mtop {
   margin-top: 40px;
@@ -52,11 +51,11 @@ body {
   color: #e94560;
 }
 .product .oldPrice {
-    display: flex;
-    justify-content: safe;
-    color: #787575;
-    text-decoration:line-through
-  }
+  display: flex;
+  justify-content: safe;
+  color: #787575;
+  text-decoration: line-through;
+}
 
 .price button:hover {
   cursor: pointer;
@@ -68,7 +67,7 @@ body {
   top: 0;
   right: 0;
   margin: 10px;
-  opacity:1;
+  opacity: 1;
   transition: 0.5s;
   display: flex;
   flex-direction: column;
@@ -85,26 +84,23 @@ body {
   margin: 10px 3px;
 }
 
-
-
 .add-to-cart {
-    position: absolute;
-    top: 60%;
-    right: 30%;
-    margin: 10px;
-    opacity: 0;
-    transition: 0.5s;
-  }
-  .add-to-cart  button {
-    background-color: #0f3460;
-    padding: 1px 10px;
-    font-size: 12px;
-    width: 100%;
-   
-    color: white;
-  }
+  position: absolute;
+  top: 60%;
+  right: 30%;
+  margin: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.add-to-cart button {
+  background-color: #0f3460;
+  padding: 1px 10px;
+  font-size: 12px;
+  width: 100%;
 
-  .product:hover .add-to-cart  {
-    opacity: 1;
-  }
-  
+  color: white;
+}
+
+.product:hover .add-to-cart {
+  opacity: 1;
+}
