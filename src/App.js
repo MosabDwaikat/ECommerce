@@ -1,14 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-import Card from "./components/Card"
-import Features from "./components/Features"
+import logo from "./logo.svg";
+import "./App.css";
+import Router from "./Router.js";
+
 function App() {
-  return (
-    <div >
-      <Card/>
-      <Features/>
-    </div>
-  );
+  return <Router />;
 }
 
 export default App;
