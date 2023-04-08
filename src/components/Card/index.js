@@ -18,7 +18,7 @@ const Card = ({ productItems}) => {
               <div className='product mtop'>
                 <div className='img'>
                   <span className='discount'>{"20"}% Off</span>
-                  <img src="./images/flash-4.png" alt='' />
+                  <img src="https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg" alt='' />
                   <div className='product-like'>
                     <FavoriteIcon/>
                     <VisibilityIcon/>
