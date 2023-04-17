@@ -1,54 +1,20 @@
-import  productsData  from "../Card/data";
-import react from "react"
-import "./style.css"
-import Rating from '@mui/material/Rating';
- import React, {useState} from 'react';
- import VisibilityIcon from '@mui/icons-material/Visibility';
- import FavoriteIcon from '@mui/icons-material/Favorite';
- import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-const Card = ( {k}) => {
-//to use props just use  productItems.name or price ...
+import productsData from "../Card/data";
 
+import { Stack } from "@mui/material";
+
+import React, { useState } from "react";
+
+import SingleCard from "./SingleCard";
+
+export default function ActionAreaCard() {
+  const [likes, setLikes] = useState(0);
   return (
-    <>
-      {
-        productsData.map((val)=> {
-            return(
-                <div className='box'>
-                <div className='product mtop'>
-                  <div className='img'>
-                    <span className='discount'>{val.id}% Off</span>
-                    <img src={val.image} alt='' />
-                    <div className='product-like'>
-                      <FavoriteIcon/>
-                      <VisibilityIcon/>
-                      
-                    </div>
-                    <div className='add-to-cart'>
-                      <button>{"add to cart"}</button> <br />
-                    </div>
-                  </div>
-                  <div className='product-details'>
-                    <h3>{""}</h3>
-                    
-                   
-                    <div className='price'>
-                      <h4>${val.price}.00   </h4> <h4 className="oldPrice ">${"50"}.00 </h4>
-                    </div> <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
-                  </div>
-                </div>
-              </div>
-            )
-        })
-      }
-
-        
-           
-          
-  
-    
-    </>
-  )
+    <Stack direction={"row"} spacing={2} width={5000} sx={{mt:1}}>
+      {productsData.map((val) => {
+        return (
+        <SingleCard likes={likes} setLikes={setLikes} id={val.id} price={val.price} title={val.title} image={val.image}/>
+        );
+      })}
+    </Stack>
+  );
 }
-
-export default Card
