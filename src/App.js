@@ -18,8 +18,10 @@ import Features from "./components/Features";
 function App() {
   return (
     <>
+      <>this is page header</>
       <Router />
-      <Features/>
+      <>this is page footer</>
+
      
     </>
   );

@@ -1,5 +1,7 @@
 import {Box} from "@mui/material";
 import { styled } from "@mui/material/styles";
+import React, { useState } from "react";
+
 import { Link, NavLink } from "react-router-dom";
 import Button from "@mui/material/Button";
 const ColorButton = styled(Button)(({ theme }) => ({
@@ -19,6 +21,8 @@ const ColorButton = styled(Button)(({ theme }) => ({
     },
   }));
 export default function AddToCart(props) {
+  const [counter, setCounter] = useState(0);
+
     return (
         <Box
                 sx={{
@@ -29,7 +33,7 @@ export default function AddToCart(props) {
                 }}
               >
                 <Link to={`/products/${props.id}`}>
-                  <ColorButton>add to cart</ColorButton>
+                  <ColorButton onClick={() => setCounter(counter + 1)}>add to cart</ColorButton>
                 </Link>
               </Box>
     )}

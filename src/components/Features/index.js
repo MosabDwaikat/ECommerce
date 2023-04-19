@@ -10,7 +10,8 @@ import Typography from "@mui/material/Typography";
 import { Stack } from "@mui/material";
 const Features = () => {
   return (
-    <Stack direction={"row"} spacing={15} sx={{ mt: 6, mx: 25 }}>
+    <Box>
+    <Stack direction={"row"} spacing={15} sx={{ mt: 6, ml: 22 }}>
       {/* <section className="Features background">
         <div className="container grid2"> */}
 
@@ -49,6 +50,7 @@ const Features = () => {
         );
       })}
     </Stack>
+    </Box>
   );
 };
 
