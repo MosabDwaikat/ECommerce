@@ -2,7 +2,7 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import { Stack } from "@mui/material";
 import TimeRemaining from "./TimeRemaining";
-const Title = () => {
+const Title = ({ title, viewTime }) => {
   return (
     <Stack direction="row" alignItems="center">
       <Typography
@@ -14,9 +14,9 @@ const Title = () => {
         color={"#000000"}
         marginTop={24 + "px"}
       >
-        Title of section
+        {title || "Title of section"}
       </Typography>
-      <TimeRemaining />
+      <TimeRemaining viewTime={viewTime} />
     </Stack>
   );
 };

@@ -1,0 +1,31 @@
+.x {
+  /* background-color: red; */
+  /* border: 1px solid; */
+  /* width: 270px; */
+  /* height: 400px; */
+  margin: 20px;
+}
+.Slider {
+  margin: 20px;
+  width: 1300px;
+  max-width: 1440px;
+}
+.btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 66;
+  margin: 4px;
+  border: none;
+  background: #f5f5f5;
+}
+.btn-div {
+  position: relative;
+  left: 80%;
+  top: -40px;
+}
+.topBtn {
+  position: relative;
+  left: 80%;
+  top: -40px;
+}
