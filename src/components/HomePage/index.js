@@ -9,11 +9,13 @@ import TimeRemaining from "../Section/TimeRemaining";
 import ActionAreaCard from "../Card";
 
 import Features from "../Features";
+import Carousalandmenu from "../Carousalandmenu";
 
 import productsData from "../Card/data";
 
 const HomePage = () => {
   return (
+
     <Stack direction="column" spacing={4} sx={{ mt: 1, ml: 7 }}>
       <>carousal and menu </>
       <Section
@@ -79,6 +81,7 @@ const HomePage = () => {
       <>images for new arrival</>
       {/* <Features /> */}
     </Stack>
+
   );
 };
 
