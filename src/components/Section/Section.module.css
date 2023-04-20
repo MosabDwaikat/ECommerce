@@ -5,3 +5,9 @@
   background: #db4444;
   border-radius: 4px;
 }
+.btn {
+  background-color: #db4444;
+  width: 235px;
+  height: 56px;
+  margin-left: 500px;
+}

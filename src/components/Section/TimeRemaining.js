@@ -5,9 +5,9 @@ import TimePanel from "./TimePanel";
 import { Stack } from "@mui/material";
 import TwoDots from "./TwoDots";
 
-const TimeRemaining = () => {
+const TimeRemaining = ({ viewTime }) => {
   return (
-    <Stack marginLeft={87 + "px"} direction="row">
+    <Stack marginLeft={87 + "px"} direction="row" display={!viewTime && "none"}>
       <TimePanel />
       <TwoDots /> <TimePanel /> <TwoDots />
       <TimePanel /> <TwoDots />
