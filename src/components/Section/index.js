@@ -1,8 +1,9 @@
 import React from "react";
-import styles from "./Section.module.css";
 import Subtitle from "./Subtitle";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+import Card from "../Card";
+import Title from "./Title";
+<<<<<<< HEAD
 import { Stack } from "@mui/material";
 import Title from "./Title";
 import CardSlider from "./CardSlider";
@@ -45,3 +46,4 @@ const Section = ({
 };
 
 export default Section;
+const arr = [{}, {}, {}, {}];

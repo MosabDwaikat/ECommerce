@@ -8,8 +8,8 @@ const Title = ({ title, viewTime }) => {
       <Typography
         fontFamily={"Inter"}
         fontStyle={"normal"}
-        fontWeight={600}
-        fontSize={36 + "px"}
+        fontWeight={300}
+        fontSize={30 + "px"}
         lineHeight={48 + "px"}
         color={"#000000"}
         marginTop={24 + "px"}
