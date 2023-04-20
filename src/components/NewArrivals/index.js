@@ -1,35 +1,22 @@
-import React from 'react'
+import React from "react";
 import { productsData } from "./productsData";
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import './index.css';
+import ArrivalProduct from "../ArrivalProduct";
+import styles from "./style.module.css";
+import { Box } from "@mui/material";
 
-const NewArrivals = () => {
-    const product = productsData[0];
+export default function NewArrivals() {
+  const productProps = {
+    titleClassName: styles.title,
+    descriptionClassName: styles.description,
+    buttonClassName: styles.button,
+  };
   return (
-    <Box
-        sx={{
-        width: 570,
-        height: 600,
-        bgcolor: '#000',
-        color: '#000',
-        '&:hover': {
-            backgroundColor: 'primary.dark',
-            // opacity: [0.9, 0.8, 0.7],
-        }, 
-        }}
-    >
-      <img src={product.image} style={{position:'absolute',width:'511px',height:'511px',left:'29px',top:'89px'}}/>
-      <Typography color='#FAFAFA'>
-        {product.title}
-      </Typography>
-      <Typography color="#FAFAFA">
-        {product.description}
-      </Typography>
-      <Button variant="text" color='primary'  >Shop Now</Button>
+    <Box className={styles.main_box}>
+      {productsData.map((product) => (
+        <Box key={product.id} className={styles.product_box}>
+          <ArrivalProduct {...product} {...productProps} />
+        </Box>
+      ))}
     </Box>
-  )
+  );
 }
-
-export default NewArrivals
