@@ -1,12 +1,14 @@
 .x {
-  background-color: red;
-  border: 1px solid;
-  width: 270px;
-  height: 400px;
+  /* background-color: red; */
+  /* border: 1px solid; */
+  /* width: 270px; */
+  /* height: 400px; */
   margin: 20px;
 }
 .Slider {
   margin: 20px;
+  width: 1300px;
+  max-width: 1440px;
 }
 .btn {
   width: 46px;

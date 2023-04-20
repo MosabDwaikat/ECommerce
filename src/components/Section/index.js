@@ -3,11 +3,10 @@ import Subtitle from "./Subtitle";
 import Box from "@mui/material/Box";
 import Card from "../Card";
 import Title from "./Title";
-<<<<<<< HEAD
 import { Stack } from "@mui/material";
-import Title from "./Title";
 import CardSlider from "./CardSlider";
 import Button from "@mui/material/Button";
+import styles from "./Section.module.css";
 
 const Section = ({
   title,
@@ -23,7 +22,7 @@ const Section = ({
     <Box
       display={"flex"}
       flexDirection={"column"}
-      sx={{ p: 2, border: "1px dashed grey" }}
+      sx={{ p: 2, border: "1px dashed grey", maxWidth: 1440 + "px" }}
     >
       <Subtitle subtitle={subtitle} />
       <Title title={title} viewTime={viewTime} />

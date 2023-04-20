@@ -7,6 +7,8 @@ import WestIcon from "@mui/icons-material/West";
 import EastIcon from "@mui/icons-material/East";
 import Button from "@mui/material/Button";
 import styles from "./Section.module.css";
+import SingleCard from "../Card/SingleCard";
+import { useState } from "react";
 
 const CardSlider = ({ topRightCorner, rows, cardsViewed, products }) => {
   var settings = {
@@ -51,7 +53,7 @@ const CardSlider = ({ topRightCorner, rows, cardsViewed, products }) => {
   const previous = () => {
     slider.slickPrev();
   };
-
+  const [likes, setLikes] = useState(0);
   return (
     <div>
       {topRightCorner === "slider-buttons" && (
@@ -81,7 +83,15 @@ const CardSlider = ({ topRightCorner, rows, cardsViewed, products }) => {
             <div className="Slide" key={index}>
               <div className="x">
                 {/* //put card here */}
-                <h3>{element.title}</h3>
+                {/* <h3>{element.title}</h3> */}
+                <SingleCard
+                  likes={likes}
+                  setLikes={setLikes}
+                  id={element.id}
+                  price={element.price}
+                  title={element.title}
+                  image={element.image}
+                />
               </div>
             </div>
           );
