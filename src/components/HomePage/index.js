@@ -11,6 +11,8 @@ import ActionAreaCard from "../Card";
 import Features from "../Features";
 
 import productsData from "../Card/data";
+import NewArrivals from "../NewArrivals";
+import MusicExperience from "../MusicExperience";
 
 const HomePage = () => {
   return (
@@ -36,6 +38,7 @@ const HomePage = () => {
         rows={1}
         viewTime={false}
         viewBottomButton={false}
+        isCategories={true}
         topRightCorner={"slider-buttons"} //slider-buttons or button
         products={productsData}
       />
@@ -50,7 +53,7 @@ const HomePage = () => {
         topRightCorner={"button"} //slider-buttons or button
         products={productsData}
       />
-      {/* <RelatedItems path="/products/:id" /> */}
+      <MusicExperience />
       <Divider width={"80%"} sx={{ m: 8 }} />
       <> caltalog with image </>
       <Section
@@ -74,9 +77,9 @@ const HomePage = () => {
         viewTime={false}
         viewBottomButton={false}
         topRightCorner={"none"} //slider-buttons or button
-        products={[productsData[0]]}
+        singleBox={true}
+        products={[<NewArrivals />]}
       />
-      <>images for new arrival</>
       {/* <Features /> */}
     </Stack>
   );

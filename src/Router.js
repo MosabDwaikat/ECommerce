@@ -8,6 +8,7 @@ import Features from "./components/Features";
 import SecondPage from "./components/SecondPage";
 import HomePage from "./components/HomePage";
 import productsData from "./components/Card/data";
+import Category from "./components/Category";
 const products = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
 
 const Router = () => {
@@ -33,6 +34,7 @@ const Router = () => {
             />
           }
         />
+        <Route path="x" element={<Category />} />
       </Routes>
     </BrowserRouter>
   );
