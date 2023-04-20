@@ -1,57 +1,46 @@
-import React from "react";
-import Data from "../Features/data";
-import "./style.css";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import { Stack } from "@mui/material";
+import React from "react"
+import "./style.css"
+import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
+import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 const Features = () => {
+  const data = [
+    {
+      cover:<AirportShuttleIcon/>,
+      title: "FREE AND FAST DELIVERY",
+      decs: "Free delivery for all orders over $140",
+    },
+    {
+      cover: <HeadsetMicIcon/>,
+      title: "24/7 CUSTOMER SERVICE",
+      decs: "Free delivery for all orders over $140",
+    },
+    {
+      cover:<VerifiedUserIcon/> ,
+      title: "MONEY BACK GUARANTEE ",
+      decs: "Free delivery for all orders over $140",
+    },
+  
+  ]
   return (
-    <Box>
-    <Stack direction={"row"} spacing={15} sx={{ mt: 6, ml: 22 }}>
-      {/* <section className="Features background">
-        <div className="container grid2"> */}
+    <>
+      <section className='Features background'>
+        <div className='container grid2'>
+          {data.map((val, index) => {
+            return (
+              <div className='product' key={index}>
+                <div className='img icon-circle'>
+                  <i>{val.cover}</i>
+                </div>
+                <h3>{val.title}</h3>
+                <p>{val.decs}</p>
+              </div>
+            )
+          })}
+        </div>
+      </section>
+    </>
+  )
+}
 
-      {Data.map((val, index) => {
-        return (
-          <Card sx={{ width: 300, height: 161 }}>
-            <CardContent>
-              <Box
-                sx={{
-                  mx: 11,
-                  mb: 2,
-                  borderRadius: "50%",
-                  backgroundColor: "grey",
-                  width: 60,
-                  height: 60,
-                  fontWeight: 600,
-                }}
-              >
-                <i>{val.cover}</i>
-              </Box>
-              <Typography
-                variant="h1"
-                component="h2"
-                sx={{ mx: 1, fontWeight: "bold", fontSize: 17 }}
-                color="text.main"
-                gutterBottom
-              >
-                {val.title}
-              </Typography>
-
-              <Typography variant="body2" sx={{ alignItems: "center", mx: 2 }}>
-                {val.decs}
-              </Typography>
-            </CardContent>
-          </Card>
-        );
-      })}
-    </Stack>
-    </Box>
-  );
-};
-
-export default Features;
+export default Features

@@ -11,7 +11,7 @@ const Subtitle = ({ subtitle }) => {
       <Typography
         fontFamily={"Poppins"}
         fontStyle={"normal"}
-        fontWeight={900}
+        fontWeight={600}
         fontSize={16 + "px"}
         lineHeight={20 + "px"}
         color={"#DB4444"}
