@@ -1,12 +1,11 @@
-import react from "react";
-import "./style.css";
-import Rating from "@mui/material/Rating";
 import React, { useState } from "react";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const Card = ({ productItems }) => {
+import { Box, Stack } from "@mui/system";
+import productsData from "./data";
+import SingleCard from "./SingleCard";
+
+const Card = () => {
   //to use props just use  productItems.name or price ...
+  const [likes, setLikes] = useState(0);
 
   return (
     <Box>
