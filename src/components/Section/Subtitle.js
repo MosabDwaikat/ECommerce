@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Stack } from "@mui/material";
 
-const Subtitle = () => {
+const Subtitle = ({ subtitle }) => {
   return (
     <Stack direction="row" spacing={2} alignItems="center">
       <Box className={styles.subtitleBox} />
@@ -16,7 +16,7 @@ const Subtitle = () => {
         lineHeight={20 + "px"}
         color={"#DB4444"}
       >
-        subtitle
+        {subtitle || "subtitle"}
       </Typography>
     </Stack>
   );

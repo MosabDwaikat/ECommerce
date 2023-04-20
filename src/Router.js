@@ -8,7 +8,21 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Section />} />
+          <Route
+            index
+            element={
+              <Section
+                title={"Title of section"}
+                subtitle={"subtitle"}
+                cardsViewed={4}
+                rows={2}
+                viewTime={true}
+                viewBottomButton={true}
+                topRightCorner={"slider-buttons"} //slider-buttons or button
+                products={products}
+              />
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>
@@ -16,3 +30,4 @@ const Router = () => {
 };
 
 export default Router;
+const products = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
