@@ -4,10 +4,10 @@ import { Typography, Stack, Rating, Divider } from "@mui/material";
 
 import Product from "../product";
 import Section from "../Section";
-import RelatedItems from "../Card/RelatedItems";
+
 import TimeRemaining from "../Section/TimeRemaining";
 import ActionAreaCard from "../Card";
-import GridCards from "../Card/GridCards";
+
 import Features from "../Features";
 
 import productsData from "../Card/data";
