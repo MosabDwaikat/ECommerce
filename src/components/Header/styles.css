@@ -1,19 +1,15 @@
 .topHeader {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding:10px;
-    margin-left: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .topHeader span {
- border-bottom: 1px solid white;
-
-
+  border-bottom: 1px solid white;
 }
 
 .topHeader p {
@@ -23,49 +19,43 @@
 }
 
 .bottomHeader {
-    display: flex;
-    margin-bottom: 50px;
+  display: flex;
+  margin-bottom: 50px;
 }
 
-
 .bottomHeader ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    margin-left:250px;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin-left: 250px;
 }
 
 .bottomHeader ul li {
-
-    margin-left:50px;
+  margin-left: 50px;
 }
 
 .bottomHeader ul li.one {
   border-bottom: 1px solid black;
-  
 }
 
 input {
-    padding: 10px;
-    margin-top: 8px;
-    font-size: 17px;
-    height: 15px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-    margin-left:80px;
-    background-color: #f7f7f7;
-    border: none;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 17px;
+  height: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 80px;
+  background-color: #f7f7f7;
+  border: none;
 }
 
 form {
-    background-color: #f7f7f7;
-    display: flex;
- 
+  background-color: #f7f7f7;
+  display: flex;
 }
 .ser {
-    font-size: 20;
+  font-size: 20;
 }
-
-

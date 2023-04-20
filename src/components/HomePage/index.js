@@ -9,17 +9,23 @@ import TimeRemaining from "../Section/TimeRemaining";
 import ActionAreaCard from "../Card";
 
 import Features from "../Features";
-import Carousalandmenu from "../Carousalandmenu";
 
 import productsData from "../Card/data";
 import NewArrivals from "../NewArrivals";
 import MusicExperience from "../MusicExperience";
+import Carousalandmenu from "../Carousalandmenu";
+import Header from "../Header";
+import Footer from "../Footer";
 
 const HomePage = () => {
   return (
-
-    <Stack direction="column" spacing={4} sx={{ mt: 1, ml: 7 }}>
-      <>carousal and menu </>
+    <Stack
+      direction="column"
+      spacing={4}
+      sx={{ mt: 1, ml: 7, maxWidth: 1440 + "px" }}
+    >
+      <Header />
+      <Carousalandmenu />
       <Section
         title={"Flash Sales"}
         subtitle={"today's"}
@@ -82,9 +88,9 @@ const HomePage = () => {
         singleBox={true}
         products={[<NewArrivals />]}
       />
-      {/* <Features /> */}
+      <Features />
+      <Footer />
     </Stack>
-
   );
 };
 
