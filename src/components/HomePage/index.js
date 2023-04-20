@@ -9,15 +9,23 @@ import TimeRemaining from "../Section/TimeRemaining";
 import ActionAreaCard from "../Card";
 
 import Features from "../Features";
-import Carousalandmenu from "../Carousalandmenu";
 
 import productsData from "../Card/data";
+import NewArrivals from "../NewArrivals";
+import MusicExperience from "../MusicExperience";
+import Carousalandmenu from "../Carousalandmenu";
+import Header from "../Header";
+import Footer from "../Footer";
 
 const HomePage = () => {
   return (
-
-    <Stack direction="column" spacing={4} sx={{ mt: 1, ml: 7 }}>
-      <>carousal and menu </>
+    <Stack
+      direction="column"
+      spacing={4}
+      sx={{ mt: 1, ml: 7, maxWidth: 1440 + "px" }}
+    >
+      <Header />
+      <Carousalandmenu />
       <Section
         title={"Flash Sales"}
         subtitle={"today's"}
@@ -38,6 +46,7 @@ const HomePage = () => {
         rows={1}
         viewTime={false}
         viewBottomButton={false}
+        isCategories={true}
         topRightCorner={"slider-buttons"} //slider-buttons or button
         products={productsData}
       />
@@ -52,7 +61,7 @@ const HomePage = () => {
         topRightCorner={"button"} //slider-buttons or button
         products={productsData}
       />
-      {/* <RelatedItems path="/products/:id" /> */}
+      <MusicExperience />
       <Divider width={"80%"} sx={{ m: 8 }} />
       <> caltalog with image </>
       <Section
@@ -76,12 +85,12 @@ const HomePage = () => {
         viewTime={false}
         viewBottomButton={false}
         topRightCorner={"none"} //slider-buttons or button
-        products={[productsData[0]]}
+        singleBox={true}
+        products={[<NewArrivals />]}
       />
-      <>images for new arrival</>
-      {/* <Features /> */}
+      <Features />
+      <Footer />
     </Stack>
-
   );
 };
 

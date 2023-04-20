@@ -15,6 +15,8 @@ const Section = ({
   viewBottomButton,
   topRightCorner,
   cardsViewed,
+  singleBox = false,
+  isCategories = false,
   products,
   rows,
 }) => {
@@ -26,12 +28,17 @@ const Section = ({
     >
       <Subtitle subtitle={subtitle} />
       <Title title={title} viewTime={viewTime} />
-      <CardSlider
-        topRightCorner={topRightCorner}
-        rows={rows}
-        cardsViewed={cardsViewed}
-        products={products}
-      />
+      {singleBox === false && (
+        <CardSlider
+          topRightCorner={topRightCorner}
+          rows={rows}
+          cardsViewed={cardsViewed}
+          products={products}
+          isCategories={isCategories}
+        />
+      )}
+      {singleBox === true && products}
+      {/* {isCategories===true&& products} */}
       <Button
         variant="contained"
         color="error"

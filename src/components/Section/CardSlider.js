@@ -9,8 +9,15 @@ import Button from "@mui/material/Button";
 import styles from "./Section.module.css";
 import SingleCard from "../Card/SingleCard";
 import { useState } from "react";
+import Category from "../Category";
 
-const CardSlider = ({ topRightCorner, rows, cardsViewed, products }) => {
+const CardSlider = ({
+  topRightCorner,
+  rows,
+  cardsViewed,
+  products,
+  isCategories,
+}) => {
   var settings = {
     arrows: false,
     rows: rows,
@@ -78,24 +85,37 @@ const CardSlider = ({ topRightCorner, rows, cardsViewed, products }) => {
       )}
 
       <Slider ref={(c) => (slider = c)} {...settings} className="Slider">
-        {products.map((element, index) => {
-          return (
-            <div className="Slide" key={index}>
-              <div className="x">
-                {/* //put card here */}
-                {/* <h3>{element.title}</h3> */}
-                <SingleCard
-                  likes={likes}
-                  setLikes={setLikes}
-                  id={element.id}
-                  price={element.price}
-                  title={element.title}
-                  image={element.image}
-                />
+        {isCategories === false &&
+          products.map((element, index) => {
+            return (
+              <div className="Slide" key={index}>
+                <div className="x">
+                  {/* //put card here */}
+                  {/* <h3>{element.title}</h3> */}
+                  <SingleCard
+                    likes={likes}
+                    setLikes={setLikes}
+                    id={element.id}
+                    price={element.price}
+                    title={element.title}
+                    image={element.image}
+                  />
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        {isCategories === true &&
+          products.map((element, index) => {
+            return (
+              <div className="Slide" key={index}>
+                <div className="x">
+                  {/* //put card here */}
+                  {/* <h3>{element.title}</h3> */}
+                  <Category />
+                </div>
+              </div>
+            );
+          })}
       </Slider>
     </div>
   );
