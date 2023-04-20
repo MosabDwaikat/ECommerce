@@ -47,7 +47,11 @@ const MyBox = () => {
                     >
 
                         {element.label}
-                        {index == 0 || index == 1 ? <ArrowForwardIosIcon /> : <></>}
+                        {index === 0 || index === 1 ? <ArrowForwardIosIcon sx={{
+
+                            marginLeft: '50px',
+                            alignItems: 'right'
+                        }} /> : <></>}
 
                     </Typography>
 
