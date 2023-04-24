@@ -11,7 +11,7 @@ export default function MusicExperience() {
     buttonClassName: styles.button,
   };
   return (
-    <Box className={styles.categories_sale}>
+    <Box className={styles.music_experience}>
       {musicExperienceData.map((item) => {
         return (
           <Box key={item.id} className={styles.product_box}>
