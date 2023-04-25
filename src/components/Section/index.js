@@ -25,7 +25,7 @@ const Section = ({
     <Box
       display={"flex"}
       flexDirection={"column"}
-      sx={{ p: 2, border: "1px dashed grey", maxWidth: 1440 + "px" }}
+      sx={{ p: 2, maxWidth: 1440 + "px" }}
     >
       <Subtitle subtitle={subtitle} />
       <Title title={title} viewTime={viewTime} time={time} />
@@ -39,7 +39,7 @@ const Section = ({
         />
       )}
       {singleBox === true && products}
-      {/* {isCategories===true&& products} */}
+
       <Button
         variant="contained"
         color="error"
