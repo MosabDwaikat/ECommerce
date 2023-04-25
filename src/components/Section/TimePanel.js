@@ -1,7 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
 
-const TimePanel = () => {
+const TimePanel = ({ time, keyword }) => {
   return (
     <Stack>
       <Typography
@@ -13,7 +13,7 @@ const TimePanel = () => {
         color={"#000000"}
         // marginTop={24 + "px"}
       >
-        Days
+        {keyword}
       </Typography>
       <Typography
         fontFamily={"Inter"}
@@ -24,7 +24,7 @@ const TimePanel = () => {
         color={"#000000"}
         // marginTop={24 + "px"}
       >
-        30
+        {time && time.toString().padStart(2, "0")}
       </Typography>
     </Stack>
   );

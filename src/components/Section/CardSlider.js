@@ -63,27 +63,6 @@ const CardSlider = ({
   const [likes, setLikes] = useState(0);
   return (
     <div>
-      {topRightCorner === "slider-buttons" && (
-        <div className="btn-div">
-          <button className="btn" onClick={previous}>
-            <WestIcon />
-          </button>
-          <button className="btn" onClick={next}>
-            <EastIcon />
-          </button>
-        </div>
-      )}
-      {topRightCorner === "button" && (
-        <Button
-          variant="contained"
-          color="error"
-          className="topBtn"
-          sx={{ margin: "auto" }}
-        >
-          View All
-        </Button>
-      )}
-
       <Slider ref={(c) => (slider = c)} {...settings} className="Slider">
         {isCategories === false &&
           products.map((element, index) => {
@@ -116,6 +95,26 @@ const CardSlider = ({
               </div>
             );
           })}
+        {topRightCorner === "slider-buttons" && (
+          <div className="btn-div">
+            <button className="btn" onClick={previous}>
+              <WestIcon />
+            </button>
+            <button className="btn" onClick={next}>
+              <EastIcon />
+            </button>
+          </div>
+        )}
+        {topRightCorner === "button" && (
+          <Button
+            variant="contained"
+            color="error"
+            className="topBtn"
+            sx={{ margin: "auto" }}
+          >
+            View All
+          </Button>
+        )}
       </Slider>
     </div>
   );
