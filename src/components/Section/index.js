@@ -39,7 +39,7 @@ const Section = ({
         />
       )}
       {singleBox === true && products}
-      {/* {isCategories===true&& products} */}
+
       <Button
         variant="contained"
         color="error"
