@@ -12,6 +12,7 @@ const Section = ({
   title,
   subtitle,
   viewTime,
+  time,
   viewBottomButton,
   topRightCorner,
   cardsViewed,
@@ -27,7 +28,7 @@ const Section = ({
       sx={{ p: 2, border: "1px dashed grey", maxWidth: 1440 + "px" }}
     >
       <Subtitle subtitle={subtitle} />
-      <Title title={title} viewTime={viewTime} />
+      <Title title={title} viewTime={viewTime} time={time} />
       {singleBox === false && (
         <CardSlider
           topRightCorner={topRightCorner}

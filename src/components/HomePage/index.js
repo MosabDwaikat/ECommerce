@@ -32,17 +32,18 @@ const HomePage = () => {
         cardsViewed={4.5}
         rows={1}
         viewTime={true}
+        time={[3, 23, 19, 56]}
         viewBottomButton={true}
         topRightCorner={"slider-buttons"} //slider-buttons or button
         products={productsData}
       />
       {/* <ActionAreaCard /> */}
-      <>button</>
+
       <Divider width={"80%"} sx={{ m: 8 }} />
       <Section
         title="Browse By Category"
         subtitle="Categories"
-        cardsViewed={4.5}
+        cardsViewed={6}
         rows={1}
         viewTime={false}
         viewBottomButton={false}
@@ -50,7 +51,7 @@ const HomePage = () => {
         topRightCorner={"slider-buttons"} //slider-buttons or button
         products={productsData}
       />
-      <>button's caltalog</>
+
       <Section
         title="Best Selling Products"
         subtitle="This Month"
@@ -63,7 +64,7 @@ const HomePage = () => {
       />
       <MusicExperience />
       <Divider width={"80%"} sx={{ m: 8 }} />
-      <> caltalog with image </>
+
       <Section
         title="Explore Our Products"
         subtitle="Our Products"
@@ -75,7 +76,7 @@ const HomePage = () => {
         products={productsData}
       />
       {/* <GridCards /> */}
-      <>button</>
+
       {/* <Divider width={"80%"} sx={{ m: 8 }} /> */}
       <Section
         title="New Arrival"
